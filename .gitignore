@@ -130,7 +130,7 @@ dist
 .pnp.*
 package-lock.json
 
-
+char.tsv
 .bunrc
 
 pnpm-lock.yaml
