@@ -1,0 +1,19 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "push": "git add . && git commit -m \"提交\" && git push",
+    "c1": "tsx src/compare.ts 浏阳镇头.tsv",
+    "c2": "tsx src/compare.ts 浏阳田坪.tsv"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@vearvip/hanzi-utils": "^1.0.8",
+    "tsx": "^4.19.2"
+  }
+}
