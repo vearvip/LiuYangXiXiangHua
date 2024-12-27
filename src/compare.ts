@@ -2,7 +2,7 @@
 import fs from 'fs'
 import path from 'path'
 import { extractHanzi } from '@vearvip/hanzi-utils' 
-import { removeCharAndFollowingBracketContent } from './utils'
+import { removeCharAndFollowingBracketContent, simplized, traditionalized } from './utils'
 
 const referTsv = [
   '訓詁諧音.tsv',
@@ -34,7 +34,10 @@ try {
     if (!Array.isArray(ret[1])) {
       ret[1] = []
     }
-    if (!originCharList.includes(char)) {
+    if (
+      !originCharList.map(traditionalized).includes(char)
+      && !originCharList.map(simplized).includes(char)
+    ) {
       ret[0].push(char)
     } else {
       ret[1].push(char)
