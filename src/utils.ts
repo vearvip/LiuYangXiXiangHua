@@ -29,3 +29,16 @@ export function simplized(cc) {
   }
   return str;
 }
+
+
+export function removeCharAndFollowingBracketContent(str, char) {
+  // 首先尝试匹配并移除指定字符后紧跟的 [xxx] 内容及中括号
+  let result = str.replace(new RegExp(`${char}\\s*\$.*?\$`, 'g'), '');
+  
+  // 如果上述替换没有发生（即字符串中没有出现 char 后跟 [xxx] 的情况），则仅移除 char
+  if (result === str) {
+      result = str.split(char).join('');
+  }
+
+  return result;
+}

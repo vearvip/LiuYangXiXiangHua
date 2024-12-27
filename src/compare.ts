@@ -2,22 +2,25 @@
 import fs from 'fs'
 import path from 'path'
 import { extractHanzi } from '@vearvip/hanzi-utils' 
+import { removeCharAndFollowingBracketContent } from './utils'
 
-const referList = [
-  '訓詁諧音.tsv'
-]
+const referTsv = [
+  '訓詁諧音.tsv',
+  '湘音檢字.tsv'
+][1]
+
 
 function getCharList(tsvPath: string): [string, string[]] {
   const tsvText = fs.readFileSync(tsvPath, 'utf8')
   // 提取汉字
-  const charList: string[] = [... new Set([...extractHanzi(tsvText.replace(/$.*?$/g, ''))])]
+  const charList: string[] = [... new Set([...extractHanzi(tsvText.replace(/\[[^\]]*\]/g, ''))])]
   return [tsvText, charList]  
 }
 
 // 镇头字表、田坪字表
 const [,originCharList] = getCharList(path.resolve(__dirname, `../${process.argv[2]}`))
 // 對比字表
-const [referStr,referCharList] = getCharList(path.resolve(__dirname, `../refer/${referList[0]}`))
+const [referStr,referCharList] = getCharList(path.resolve(__dirname, `../refer/${referTsv}`))
 // console.log({
 //   originCharList,
 //   referCharList
@@ -39,11 +42,12 @@ try {
     return ret
   }, [])
   console.log(`✅ 對比結束，漏了${omissionList.length}個字：`, omissionList)
-  let resultStr = referStr
+  let resultStr =  referStr.replace(/\[[^\]]*\]/g, '')
+  
   includeList.forEach(char => {
-    resultStr = resultStr.replaceAll(char, '')
+    resultStr = removeCharAndFollowingBracketContent(resultStr, char)
   })
-  fs.writeFileSync(path.resolve(__dirname, '../omission/char.tsv'), resultStr)
+  fs.writeFileSync(path.resolve(__dirname, `../omission/${referTsv}`), resultStr)
 } catch (error) {
   console.error(`⚠️ 對比失敗：`, error)
 }
