@@ -6,8 +6,11 @@ import { removeCharAndFollowingBracketContent, simplized, traditionalized } from
 
 const referTsv = [
   '訓詁諧音.tsv',
-  '湘音檢字.tsv'
-][1]
+  '湘音檢字.tsv',
+  '',
+  '新長沙.tsv',
+  '南縣.tsv'
+][4]
 
 
 function getCharList(tsvPath: string): [string, string[]] {
