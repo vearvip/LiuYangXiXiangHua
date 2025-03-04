@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "push": "git add . && git commit -m \"提交\" && git push",
-    "c1": "tsx src/compare.ts 浏阳镇头.tsv",
-    "c2": "tsx src/compare.ts 浏阳田坪.tsv"
+    "c": "tsx src/compare.ts 浏阳镇头.tsv"
   },
   "keywords": [],
   "author": "",
