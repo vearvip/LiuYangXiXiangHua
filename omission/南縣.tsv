@@ -1,505 +1,76 @@
- 
-məu	3	
-fəu	3	
-təu	1	莞
-təu	2	
-təu	3	睹
-təu	5	犊=□
-təu	6	--
-təu	7	
-tʰəu	1	
-tʰəu	3	
-tʰəu	5	
-tʰəu	7	
-ləu	1	□□
-ləu	2	□
-ləu	3	
-ləu	5	
-ləu	6	鸕
-ləu	7	□
-tsəu	1	
-tsəu	2	雏
-tsəu	3	
-tsəu	5	
-tsəu	7	=□
-tsʰəu	1	
-tsʰəu	1	
-tsʰəu	5	
-tsʰəu	7	□
-səu	1	
-səu	2	□
-səu	3	
-səu	5	==-
-səu	6	--□
-səu	7	=
-kəu	1	
-kəu	2	□
-kəu	3	
-kəu	5	□
-kʰəu	1	□
-kʰəu	3	
-kʰəu	5	□
-kʰəu	7	□
-ŋəu	1	
-ŋəu	3	
-ŋəu	5	
-xəu	1	□
-xəu	2	
-xəu	3	
-xəu	5	=
-xəu	6	-
-tiəu	1	
-liəu	1	
-liəu	2	
-liəu	3	
-liəu	5	绺
-liəu	6	
-ʨiəu	1	
-ʨiəu	2	梂
-ʨiəu	3	□
-ʨiəu	5	==□□□□
-ʨiəu	6	--
-ʨʰiəu	1	鳅□
-ʨʰiəu	3	□
-ʨʰiəu	7	-
-ȵiəu	2	
-ȵiəu	3	
-ȵiəu	5	
-ȵiəu	7	
-ɕiəu	1	
-ɕiəu	3	□
-ɕiəu	5	
-ɕiəu	7	=
-iəu	1	
-iəu	2	
-iəu	3	
-iəu	5	-=-
-iəu	6	-
-iəu	7	==
-põ	1	
-põ	2	
-põ	5	
-põ	6	
-pʰõ	3	□
-pʰõ	5	
-mõ	2	
-mõ	5	
-mõ	6	
-tõ	1	
-tõ	2	糰
-tõ	3	
-tõ	5	
-tõ	6	
-lõ	2	-
-lõ	3	
-lõ	6	
+  
+liəu	5	绺 
+ʨiəu	2	梂 
+ʨʰiəu	1	鳅□ 
+tõ	2	糰 
 tsõ	1	钻
-tsõ	5	钻
-tsʰõ	1	
-tsʰõ	5	
-sõ	1	
-sõ	5	
-kõ	1	
-kõ	3	
-kõ	5	
-kʰõ	1	
-kʰõ	3	
-xõ	1	
-xõ	3	
-xõ	5	痪
-xõ	6	
-õ	2	
-õ	3	
-pɔ̃	1	
-pɔ̃	2	
-pɔ̃	3	
-pɔ̃	5	
-pɔ̃	6	□
-pʰɔ̃	1	
-pʰɔ̃	5	□髈□
-pʰɔ̃	5	
-pʰɔ̃	6	□
-mɔ̃	1	□
-mɔ̃	2	
-mɔ̃	3	
-tɔ̃	1	
-tɔ̃	2	
-tɔ̃	3	
-tɔ̃	5	
-tɔ̃	6	□
-tʰɔ̃	1	
-tʰɔ̃	3	
-tʰɔ̃	5	
-lɔ̃	1	□
-lɔ̃	2	
-lɔ̃	3	□□
-lɔ̃	5	=
-lɔ̃	6	-
-tsɔ̃	1	赃
-tsɔ̃	2	
-tsɔ̃	3	
-tsɔ̃	5	这=
-tsɔ̃	6	--
-tsʰɔ̃	1	猖
-tsʰɔ̃	3	□
-tsʰɔ̃	5	
-sɔ̃	1	
-sɔ̃	2	
-sɔ̃	3	
-sɔ̃	5	
-sɔ̃	6	
-kɔ̃	1	
-kɔ̃	3	--
-kɔ̃	5	
-kɔ̃	6	□
-kʰɔ̃	1	
-kʰɔ̃	3	
-kʰɔ̃	5	-
-ŋɔ̃	1	□
-ŋɔ̃	2	
-xɔ̃	1	
-xɔ̃	2	
-xɔ̃	3	
-xɔ̃	5	
-xɔ̃	6	
-ɔ̃	1	-
-ɔ̃	2	----
-ɔ̃	3	--
-ɔ̃	6	--
-piɔ̃	3	
-tiɔ̃	5	
-tʰiɔ̃	3	□
-tʰiɔ̃	6	□
-liɔ̃	2	
-liɔ̃	3	
-liɔ̃	5	=
-liɔ̃	6	-
-ʨiɔ̃	1	
-ʨiɔ̃	2	
-ʨiɔ̃	3	=
-ʨiɔ̃	5	□
-ʨiɔ̃	6	
-ʨʰiɔ̃	1	
-ʨʰiɔ̃	3	
-ʨʰiɔ̃	5	□戗□
-ȵiɔ̃	2	
-ȵiɔ̃	3	□□
-ȵiɔ̃	5	
-ȵiɔ̃	6	
-ɕiɔ̃	1	襄
-ɕiɔ̃	2	
-ɕiɔ̃	3	
-ɕiɔ̃	5	=萫
-ɕiɔ̃	6	-
-iɔ̃	1	-
-iɔ̃	2	
-iɔ̃	3	
-iɔ̃	5	=
-iɔ̃	6	
-kuɔ̃	1	
-kuɔ̃	2	
-kuɔ̃	3	=
-kuɔ̃	5	
-kuɔ̃	6	□
-kʰuɔ̃	3	□
-kʰuɔ̃	5	=
-kʰuɔ̃	7	□
-uɔ̃	1	=
-uɔ̃	2	====
-uɔ̃	3	==
-uɔ̃	5	==
-tẽ	1	-
-tẽ	2	-
-tẽ	3	--
-tẽ	5	-
-tʰẽ	1	-
-tʰẽ	3	隥
-tʰẽ	5	
-lẽ	3	
-piẽ	1	
-piẽ	2	
-piẽ	3	
-piẽ	5	==
-piẽ	6	--
-pʰiẽ	1	翩
-pʰiẽ	3	□□
-pʰiẽ	5	
-miẽ	2	
-miẽ	3	渑
-miẽ	5	
-miẽ	6	麺
-tiẽ	1	
-tiẽ	2	
-tiẽ	3	
-tiẽ	5	
-tiẽ	6	
-tʰiẽ	1	
-tʰiẽ	3	
-liẽ	2	
-liẽ	3	
-liẽ	5	=□
-liẽ	6	-□
-tsiẽ	1	蘸--
-tsiẽ	2	-
-tsiẽ	3	
-tsiẽ	5	
-tsiẽ	6	
-siẽ	1	--
-siẽ	2	
-siẽ	3	
-siẽ	5	=
-siẽ	6	-
-ʨiẽ	1	
-ʨiẽ	2	撏
-ʨiẽ	3	===
-ʨiẽ	5	饯
-ʨiẽ	6	
-ʨʰiẽ	1	
-ʨʰiẽ	3	
-ʨʰiẽ	5	□
-ȵiẽ	1	
-ȵiẽ	2	-
-ȵiẽ	3	-
-ȵiẽ	5	
-ȵiẽ	6	
-ɕiẽ	1	
-ɕiẽ	2	
-ɕiẽ	3	
-ɕiẽ	5	=
-ɕiẽ	6	-
-kiẽ	1	---
-kiẽ	3	□
-kʰiẽ	3	-
-ŋiẽ	3	□□
-ŋiẽ	6	-
-xiẽ	1	-
-xiẽ	3	-
-xiẽ	5	-
+tsõ	5	钻 
+xõ	5	痪 
+pʰɔ̃	5	□髈□ 
+tsɔ̃	1	赃 
+tsɔ̃	5	这= 
+tsʰɔ̃	1	猖 
+ʨʰiɔ̃	5	□戗□ 
+ɕiɔ̃	1	襄 
+ɕiɔ̃	5	=萫 
+tʰẽ	3	隥 
+pʰiẽ	1	翩 
+miẽ	3	渑 
+miẽ	6	麺 
+tsiẽ	1	蘸-- 
+ʨiẽ	2	撏 
+ʨiẽ	5	饯 
 iẽ	1	焉胭
-iẽ	2	檐=
-iẽ	3	=□
-iẽ	5	
-ʨyẽ	1	皲
-ʨyẽ	2	
-ʨyẽ	3	
-ʨyẽ	5	
-ʨyẽ	6	
-ʨʰyẽ	1	
-ʨʰyẽ	3	
-ʨʰyẽ	5	
-ɕyẽ	1	
+iẽ	2	檐= 
+ʨyẽ	1	皲 
 ɕyẽ	2	椽=□
 ɕyẽ	5	楦
-yẽ	1	箢
-yẽ	2	==
-yẽ	3	=
-yẽ	5	=
-yẽ	6	-
-pan	1	
-pan	3	
-pan	5	□
-pan	6	
-pʰan	1	
+yẽ	1	箢 
 pʰan	5	襻□
-man	1	□鞔
-man	2	
-man	3	-
-man	5	=
-man	6	-
-fan	1	
-fan	2	
-fan	3	
-fan	5	□
-fan	6	□
-tan	1	□
-tan	2	
-tan	3	□
-tan	5	=
-tan	6	-
-tʰan	1	
-tʰan	3	䠀
-tʰan	5	
-lan	1	□□
-lan	2	
-lan	3	
-lan	5	=
-lan	6	-
-tsan	1	
-tsan	2	
+man	1	□鞔 
+tʰan	3	䠀 
 tsan	3	攒
-tsan	5	绽灒
-tsan	6	□
+tsan	5	绽灒 
 tsʰan	1	掺
 tsʰan	3	阐
-tsʰan	5	忏
-san	1	
-san	3	
-san	5	
-kan	1	
-kan	3	---
-kan	5	-□
-kʰan	3	歁
-kʰan	3	
-kʰan	5	
-ŋan	1	
-ŋan	2	-
-ŋan	3	-
-ŋan	5	==谙
-ŋan	6	--
-xan	1	嫨
-xan	2	
-xan	3	
-xan	5	捍
-xan	6	
-kuan	1	
-kuan	5	□
-kuan	6	□□
-kʰuan	1	-
-kʰuan	6	哐
-uan	1	
-uan	2	
-uan	3	=惋
-uan	5	=□
-uan	6	--
-uan	1	
-pən	2	
-pən	3	
-pən	5	
-pən	6	□
-pʰən	1	
-pʰən	3	
-pʰən	5	
-pʰən	6	
-mən	1	-□
-mən	2	-
-mən	3	蠓
-mən	5	
-mən	6	
-fən	1	
-fən	2	豮
-fən	3	
-fən	5	=
-fən	6	-
-tən	1	=
-tən	2	=臀
-tən	3	=
-tən	5	==□□□
-tən	6	-
-tən	7	□
-tʰən	1	=
-tʰən	3	隥=□□
-tʰən	5	
-tʰən	6	□
-lən	1	
+tsʰan	5	忏 
+kʰan	3	歁 
+ŋan	5	==谙 
+xan	1	嫨 
+xan	5	捍 
+kʰuan	6	哐 
+uan	3	=惋 
+mən	3	蠓 
+fən	2	豮 
+tən	2	=臀 
+tʰən	3	隥=□□ 
 lən	2	=能
 lən	3	垅=
-lən	5	扔=□□□□
-lən	6	-=
-tsən	1	==徵
-tsən	2	=-
-tsən	3	疹
-tsən	5	=
-tsən	6	-
+lən	5	扔=□□□□ 
+tsən	1	==徵 
+tsən	3	疹 
 tsʰən	1	抻
 tsʰən	3	忖□
 tsʰən	5	=橕□
-sən	1	=娠==笙
-sən	2	□
-sən	3	
-sən	5	□
-sən	6	□
-kən	1	===
+sən	1	=娠==笙 
 kən	3	粳
-kən	5	=羾
-kən	6	-
-kən	7	□
-kən	1	
-kən	3	=
-kən	5	
+kən	5	=羾 
 ŋən	1	壅
-ŋən	5	壅
-ŋən	6	=
-xən	1	=揈
-xən	2	
-xən	3	=
-xən	5	=□
-xən	6	□
-kuən	3	
-kuən	5	
-kuən	6	□
-kʰuən	1	
-kʰuən	3	
-kʰuən	5	
-uən	1	
-uən	2	=
-uən	3	
-uən	5	揾
-uən	6	
-pin	1	镔
-pin	2	
-pin	3	
-pin	5	迸併
-pin	6	
-pʰin	1	
-pʰin	3	
-pʰin	5	
-min	2	=铭缗
-min	3	
-min	5	=
-min	6	-
-tin	1	
-tin	2	
-tin	3	
-tin	5	
-tin	6	
-tʰin	1	
-tʰin	3	蹬
-tʰin	5	
-lin	1	□□
-lin	2	棱翎
-lin	3	
-lin	5	
-lin	6	□
-ʨin	1	睛腈□
-ʨin	2	-□
-ʨin	3	侭□=
-ʨin	5	□
-ʨin	6	-
-ʨʰin	1	
-ʨʰin	3	
-ʨʰin	5	磐
-ʨʰin	6	
-ȵin	2	-
-ȵin	3	-
-ȵin	5	□
-ȵin	6	-
-ɕin	1	
-ɕin	2	~
-ɕin	3	□
+ŋən	5	壅 
+xən	1	=揈 
+uən	5	揾 
+pin	1	镔 
+pin	5	迸併 
+min	2	=铭缗 
+tʰin	3	蹬 
+lin	2	棱翎 
+ʨin	1	睛腈□ 
+ʨin	3	侭□= 
+ʨʰin	5	磐 
 ɕin	5	汛焮
 ɕin	6	□□
 in	1	荫
-in	2	氄
-in	3	
-in	5	□
-in	6	
-ʨyn	1	
-ʨyn	2	
-ʨyn	3	
-ʨyn	5	窘=
-ʨyn	6	-
-ʨʰyn	1	=
-ʨʰyn	3	苘
-ɕyn	1	
-ɕyn	2	
-ɕyn	3	
-ɕyn	5	=
-ɕyn	6	-
-yn	1	
-yn	2	
-yn	3	
-yn	5	==
-yn	6	--
-m	1	-
-n	3	尔-
-n	6	
+in	2	氄 
+ʨyn	5	窘= 
+ʨʰyn	3	苘 
+n	3	尔- 
