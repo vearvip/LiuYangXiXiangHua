@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "push": "git add . && git commit -m \"提交\" && git push",
-    "c": "tsx src/compare.ts 浏阳镇头.tsv"
+    "compare": "tsx src/compare/index.ts",
+    "transform": "tsx src/transform/index.ts"
+    
+
   },
   "keywords": [],
   "author": "",
@@ -14,5 +17,8 @@
     "@types/node": "^22.10.2",
     "@vearvip/hanzi-utils": "^1.0.8",
     "tsx": "^4.19.2"
+  },
+  "dependencies": {
+    "csv-parser": "^3.2.0"
   }
 }

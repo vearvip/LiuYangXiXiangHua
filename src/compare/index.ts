@@ -2,7 +2,7 @@
 import fs from 'fs'
 import path from 'path'
 import { extractHanzi } from '@vearvip/hanzi-utils' 
-import { removeCharAndFollowingBracketContent, simplized, traditionalized } from './utils'
+import { removeCharAndFollowingBracketContent, simplized, traditionalized } from '../utils'
 
 const referTsv = [
   '訓詁諧音.tsv',
@@ -21,9 +21,11 @@ function getCharList(tsvPath: string): [string, string[]] {
 }
 
 // 镇头字表、田坪字表
-const [,originCharList] = getCharList(path.resolve(__dirname, `../${process.argv[2]}`))
+// const [,originCharList] = getCharList(path.resolve(__dirname, `../${process.argv[2]}`))
+const [,originCharList] = getCharList(path.resolve(__dirname, `../../浏阳镇头.tsv`))
 // 對比字表
-const [referStr,referCharList] = getCharList(path.resolve(__dirname, `../refer/${referTsv}`))
+const [referStr,referCharList] = getCharList(path.resolve(__dirname, `../../refer/${referTsv}`))
+
 // console.log({
 //   originCharList,
 //   referCharList
@@ -53,7 +55,7 @@ try {
   includeList.forEach(char => {
     resultStr = removeCharAndFollowingBracketContent(resultStr, char)
   })
-  fs.writeFileSync(path.resolve(__dirname, `../omission/${referTsv}`), resultStr)
+  fs.writeFileSync(path.resolve(__dirname, `../../omission/${referTsv}`), resultStr)
 } catch (error) {
   console.error(`⚠️ 對比失敗：`, error)
 }
