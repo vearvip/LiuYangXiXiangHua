@@ -47,6 +47,15 @@ export function genGuanQiao(data: CharList) {
 
     // 转换ɲ 为 ȵ
     ele[YinBiao] = ele[YinBiao].replace('ɲ', 'ȵ')
+    // 转换əu 为 ei
+    if (  
+      ele[YinBiao].includes('əu')
+      && !ele[YinBiao].includes('i')
+    ) {
+      ele[YinBiao] = ele[YinBiao].replace('əu', 'ei')
+    }
+    // 转换oŋ 为 əŋ
+    ele[YinBiao] = ele[YinBiao].replace('oŋ', 'əŋ')
 
 
   })
