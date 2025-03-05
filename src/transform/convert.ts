@@ -1,6 +1,11 @@
 import { CharList, saveTsv, ShengDiao, YinBiao } from "./util"
 
 
+// 生成浏阳镇头.tsv
+export function genZhenTou(data: CharList) {
+  const charList: CharList = JSON.parse(JSON.stringify(data)) 
+  saveTsv(charList, `浏阳镇头.tsv`)
+}
 // 生成浏阳田坪.tsv
 export function genTianPing(data: CharList) {
   const charList: CharList = JSON.parse(JSON.stringify(data))
