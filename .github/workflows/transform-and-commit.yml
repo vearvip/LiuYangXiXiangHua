@@ -1,0 +1,27 @@
+name: Transform and Commit on TSV Change
+
+on:
+  push:
+    paths:
+      - '浏阳镇头.tsv'
+
+jobs:
+  transform-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Transform TSV file
+        run: npm run transform
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update transformed files"
+          git push
