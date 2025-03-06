@@ -1,6 +1,6 @@
 import TshetUinh from "tshet-uinh";
 
-const reqRet1 = TshetUinh.資料.query字頭("謀");
+const reqRet1 = TshetUinh.資料.query字頭("枸");
 const reqRet2 = TshetUinh.資料.query字頭("瘦");
 
 console.log("1：", reqRet1);

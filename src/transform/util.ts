@@ -47,7 +47,8 @@ export function saveTsv(data: CharList, fileName: string) {
   // 将 JSON 数组转换为 TSV 格式字符串
   const tsvData = [
     // headers.join('\t'), // 添加表头行
-    ...data
+    // ...data
+    ...mergeDuplicateItems(data)
       .filter((ele) => ele[ShiYi])
       .map((row) => headers.map((header) => row[header]).join("\t")), // 添加数据行
   ].join("\n");
@@ -59,5 +60,29 @@ export function saveTsv(data: CharList, fileName: string) {
     } else {
       console.log("File has been saved as", outputFilePath);
     }
+  });
+}
+
+export function mergeDuplicateItems(data: CharList) {
+  // data = JSON.parse(JSON.stringify(data));
+  let yinBiaoShengDiaoList: string[] = [];
+  let shiYiList: string[] = [];
+  data.forEach((ele) => {
+    const yinBiaoShengDiaoStr = ele[YinBiao] + "-" + ele[ShengDiao];
+    if (yinBiaoShengDiaoList.includes(yinBiaoShengDiaoStr)) {
+      shiYiList[yinBiaoShengDiaoList.indexOf(yinBiaoShengDiaoStr)] +=
+        ele[ShiYi];
+    } else {
+      yinBiaoShengDiaoList.push(yinBiaoShengDiaoStr);
+      shiYiList[yinBiaoShengDiaoList.length - 1] = ele[ShiYi];
+    }
+  });
+
+  return yinBiaoShengDiaoList.map((yinBiaoShengDiao, index) => {
+    return {
+      YinBiao: yinBiaoShengDiao.split("-")[0],
+      ShengDiao: yinBiaoShengDiao.split("-")[1],
+      ShiYi: shiYiList[index],
+    };
   });
 }

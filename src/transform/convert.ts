@@ -64,44 +64,42 @@ export function genGuanQiao(data: CharList) {
 
       charArr.forEach((item) => {
         const queryInfoList = TshetUinh.資料.query字頭(item.zi);
+        let needConvert = false;
         queryInfoList.forEach((queryInfo) => {
-          // console.log('queryInfo["音韻地位"]', {
-          //   母: queryInfo["音韻地位"].母,
-          //   呼: queryInfo["音韻地位"].呼,
-          //   等: queryInfo["音韻地位"].等,
-          //   類: queryInfo["音韻地位"].類,
-          //   韻: queryInfo["音韻地位"].韻,
-          //   聲: queryInfo["音韻地位"].聲,
-          // });
-
           if (
             (queryInfo["音韻地位"].等 === "三" &&
               queryInfo["音韻地位"].韻 === "尤") ||
             (queryInfo["音韻地位"].等 === "一" &&
               queryInfo["音韻地位"].韻 === "侯")
           ) {
-            eiList.push({
-              ...item,
-              [ShengDiao]: ele[ShengDiao],
-              [YinBiao]: ele[YinBiao],
-            });
-          } else {
-            ouList.push({
-              ...item,
-              [ShengDiao]: ele[ShengDiao],
-              [YinBiao]: ele[YinBiao],
-            });
+            needConvert = true;
           }
         });
+        if (needConvert) {
+          eiList.push({
+            ...item,
+            [ShengDiao]: ele[ShengDiao],
+            [YinBiao]: ele[YinBiao],
+          });
+        } else {
+          ouList.push({
+            ...item,
+            [ShengDiao]: ele[ShengDiao],
+            [YinBiao]: ele[YinBiao],
+          });
+        }
       });
     }
   });
+  // 可能有重复，这里去重
   eiList = [...new Set(eiList.map((ele) => JSON.stringify(ele)))].map((ele) =>
     JSON.parse(ele)
   );
+  // 可能有重复，这里去重
   ouList = [...new Set(ouList.map((ele) => JSON.stringify(ele)))].map((ele) =>
     JSON.parse(ele)
   );
+  // 重新恢复ou和ei
   charList.forEach((ele) => {
     // 回填əu
     if (ele[YinBiao].includes("əu") && !ele[YinBiao].includes("i")) {
@@ -142,6 +140,7 @@ export function genGuanQiao(data: CharList) {
         .join("");
     }
   });
+
   saveTsv(charList, `浏阳官桥.tsv`);
   // saveTsv(eiList, `浏阳官桥2.tsv`);
   // fs.writeFile("./xx.json", JSON.stringify(eiList), (err) => {});
