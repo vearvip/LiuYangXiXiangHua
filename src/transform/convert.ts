@@ -29,6 +29,13 @@ export function genGuanQiao(data: CharList) {
     ouList: ParseStringObject = [];
   charList.forEach((ele) => {
     if (
+      // 加入 容融绒 3个白读
+      ele[YinBiao] === "in" &&
+      Number(ele[ShengDiao]) === 2
+    ) {
+      ele[ShiYi] += "容-融-绒-";
+    }
+    if (
       // 混淆c 和 ts 为 tɕ
       (ele[YinBiao].includes("c") || ele[YinBiao].includes("ts")) &&
       (ele[YinBiao].includes("i") || ele[YinBiao].includes("y"))

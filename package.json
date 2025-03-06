@@ -6,7 +6,8 @@
   "scripts": {
     "push": "git add . && git commit -m \"提交\" && git push",
     "compare": "tsx src/compare/index.ts",
-    "transform": "tsx src/transform/index.ts"
+    "transform": "tsx src/transform/index.ts",
+    "try": "tsx ./src/try/index.ts"
   },
   "keywords": [],
   "author": "",
