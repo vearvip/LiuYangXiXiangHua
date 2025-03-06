@@ -49,6 +49,7 @@ export type parseStringObject = Array<{
   shiYi: string;
   baiDu: boolean;
   wenDu: boolean;
+  [key: string]: any;
 }>;
 
 // 解析分割同音字及其释义
@@ -56,7 +57,7 @@ export type parseStringObject = Array<{
 // const input = "觸束=畜[～牲]逐軸-蛐-[～蟮子]愁=";
 // console.log(parseString(input));
 export function parseString(s): parseStringObject {
-  const result = [];
+  const result: any = [];
   let i = 0;
 
   while (i < s.length) {

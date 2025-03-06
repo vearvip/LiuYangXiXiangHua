@@ -96,7 +96,12 @@ export function genGuanQiao(data: CharList) {
       });
     }
   });
-
+  eiList = [...new Set(eiList.map((ele) => JSON.stringify(ele)))].map((ele) =>
+    JSON.parse(ele)
+  );
+  ouList = [...new Set(ouList.map((ele) => JSON.stringify(ele)))].map((ele) =>
+    JSON.parse(ele)
+  );
   charList.forEach((ele) => {
     // 回填əu
     if (ele[YinBiao].includes("əu") && !ele[YinBiao].includes("i")) {
@@ -117,7 +122,7 @@ export function genGuanQiao(data: CharList) {
         })
         .join("");
     }
-    // 回填əu
+    // 回填ei
     if (ele[YinBiao].includes("ei")) {
       ele[ShiYi] += eiList
         .filter((eiItem) => {
@@ -138,6 +143,6 @@ export function genGuanQiao(data: CharList) {
     }
   });
   saveTsv(charList, `浏阳官桥.tsv`);
-  saveTsv(eiList, `浏阳官桥2.tsv`);
+  // saveTsv(eiList, `浏阳官桥2.tsv`);
   // fs.writeFile("./xx.json", JSON.stringify(eiList), (err) => {});
 }
