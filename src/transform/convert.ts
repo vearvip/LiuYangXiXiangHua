@@ -121,7 +121,7 @@ export function genGuanQiao(data: CharList) {
         .join("");
     }
   });
-  // 回填ei
+  // 回补ei
   eiList = eiList.map((eiItem) => {
     return {
       ...eiItem,
@@ -163,6 +163,7 @@ export function genGuanQiao(data: CharList) {
         eiItem.shiYi;
     }
   });
+  // 回填未补在已有行末尾的ei
   const otherChartList = Object.keys(otherCharObj).map((yinBiaoShengDiao) => {
     return {
       [YinBiao]: yinBiaoShengDiao.split("-")[0],
@@ -170,7 +171,7 @@ export function genGuanQiao(data: CharList) {
       [ShiYi]: otherCharObj[yinBiaoShengDiao],
     };
   });
-  console.log(otherChartList);
+  // console.log(otherChartList);
 
   saveTsv([...charList, ...otherChartList], `浏阳官桥.tsv`);
   // saveTsv(eiList, `浏阳官桥2.tsv`);
