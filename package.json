@@ -7,8 +7,6 @@
     "push": "git add . && git commit -m \"提交\" && git push",
     "compare": "tsx src/compare/index.ts",
     "transform": "tsx src/transform/index.ts"
-    
-
   },
   "keywords": [],
   "author": "",
@@ -19,6 +17,7 @@
     "tsx": "^4.19.2"
   },
   "dependencies": {
-    "csv-parser": "^3.2.0"
+    "csv-parser": "^3.2.0",
+    "tshet-uinh": "^0.15.1"
   }
 }
