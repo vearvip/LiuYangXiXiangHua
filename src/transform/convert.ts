@@ -1,4 +1,4 @@
-import { parseString, parseStringObject, removeLetters } from "../utils";
+import { parseString, ParseStringObject, removeLetters } from "../utils";
 import { CharList, saveTsv, ShengDiao, ShiYi, YinBiao } from "./util";
 import TshetUinh from "tshet-uinh";
 import fs from "fs";
@@ -25,8 +25,8 @@ export function genTianPing(data: CharList) {
 // 生成浏阳官桥.tsv
 export function genGuanQiao(data: CharList) {
   const charList: CharList = JSON.parse(JSON.stringify(data));
-  let eiList: parseStringObject = [],
-    ouList: parseStringObject = [];
+  let eiList: ParseStringObject = [],
+    ouList: ParseStringObject = [];
   charList.forEach((ele) => {
     if (
       // 混淆c 和 ts 为 tɕ
@@ -99,9 +99,9 @@ export function genGuanQiao(data: CharList) {
   ouList = [...new Set(ouList.map((ele) => JSON.stringify(ele)))].map((ele) =>
     JSON.parse(ele)
   );
-  // 重新恢复ou和ei
+
+  // 回填əu
   charList.forEach((ele) => {
-    // 回填əu
     if (ele[YinBiao].includes("əu") && !ele[YinBiao].includes("i")) {
       ele[ShiYi] = ouList
         .filter((ouItem) => {
@@ -120,28 +120,59 @@ export function genGuanQiao(data: CharList) {
         })
         .join("");
     }
-    // 回填ei
-    if (ele[YinBiao].includes("ei")) {
-      ele[ShiYi] += eiList
-        .filter((eiItem) => {
-          return (
-            eiItem[YinBiao].replace("əu", "ei") == ele[YinBiao] &&
-            eiItem[ShengDiao] == ele[ShengDiao]
-          );
-        })
-        .map((eiItem) => {
-          return (
-            eiItem.zi +
-            (eiItem.baiDu ? "-" : "") +
-            (eiItem.wenDu ? "=" : "") +
-            eiItem.shiYi
-          );
-        })
-        .join("");
+  });
+  // 回填ei
+  eiList = eiList.map((eiItem) => {
+    return {
+      ...eiItem,
+      [YinBiao]: eiItem[YinBiao].replace("əu", "ei"),
+    };
+  });
+  eiList.forEach((eiItem, eiItemIndex) => {
+    charList.forEach((ele, eleIndex) => {
+      if (
+        eiItem[YinBiao] == ele[YinBiao] &&
+        eiItem[ShengDiao] == ele[ShengDiao]
+      ) {
+        charList[eleIndex][ShiYi] +=
+          eiItem.zi +
+          (eiItem.baiDu ? "-" : "") +
+          (eiItem.wenDu ? "=" : "") +
+          eiItem.shiYi;
+        // @ts-ignore
+        eiList[eiItemIndex] = false;
+      }
+    });
+  });
+  const otherEiList = eiList.filter((ei) => ei);
+  // console.log(otherEiList);
+  let otherCharObj = {};
+  otherEiList.forEach((eiItem) => {
+    const yinBiaoShengDiao = eiItem[YinBiao] + "-" + eiItem[ShengDiao];
+    if (otherCharObj[yinBiaoShengDiao]) {
+      otherCharObj[yinBiaoShengDiao] +=
+        eiItem.zi +
+        (eiItem.baiDu ? "-" : "") +
+        (eiItem.wenDu ? "=" : "") +
+        eiItem.shiYi;
+    } else {
+      otherCharObj[yinBiaoShengDiao] =
+        eiItem.zi +
+        (eiItem.baiDu ? "-" : "") +
+        (eiItem.wenDu ? "=" : "") +
+        eiItem.shiYi;
     }
   });
+  const otherChartList = Object.keys(otherCharObj).map((yinBiaoShengDiao) => {
+    return {
+      [YinBiao]: yinBiaoShengDiao.split("-")[0],
+      [ShengDiao]: yinBiaoShengDiao.split("-")[1],
+      [ShiYi]: otherCharObj[yinBiaoShengDiao],
+    };
+  });
+  console.log(otherChartList);
 
-  saveTsv(charList, `浏阳官桥.tsv`);
+  saveTsv([...charList, ...otherChartList], `浏阳官桥.tsv`);
   // saveTsv(eiList, `浏阳官桥2.tsv`);
   // fs.writeFile("./xx.json", JSON.stringify(eiList), (err) => {});
 }

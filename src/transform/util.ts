@@ -80,9 +80,9 @@ export function mergeDuplicateItems(data: CharList) {
 
   return yinBiaoShengDiaoList.map((yinBiaoShengDiao, index) => {
     return {
-      YinBiao: yinBiaoShengDiao.split("-")[0],
-      ShengDiao: yinBiaoShengDiao.split("-")[1],
-      ShiYi: shiYiList[index],
+      [YinBiao]: yinBiaoShengDiao.split("-")[0],
+      [ShengDiao]: yinBiaoShengDiao.split("-")[1],
+      [ShiYi]: shiYiList[index],
     };
   });
 }
