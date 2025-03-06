@@ -1,7 +1,7 @@
 import TshetUinh from "tshet-uinh";
 
-const reqRet1 = TshetUinh.資料.query字頭("枸");
-const reqRet2 = TshetUinh.資料.query字頭("瘦");
-
-console.log("1：", reqRet1);
-console.log("2：", reqRet2);
+console.log(
+  TshetUinh.資料.query字頭("永"),
+  TshetUinh.資料.query字頭("勇"),
+  TshetUinh.資料.query字頭("荣")
+);
