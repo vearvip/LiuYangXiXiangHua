@@ -44,7 +44,7 @@ export function removeLetters(str) {
   return str.replace(/[a-zA-Z]/g, "");
 }
 
-export type ParseStringObject = Array<{
+export type ParseStringResultList = Array<{
   zi: string;
   shiYi: string;
   baiDu: boolean;
@@ -56,7 +56,7 @@ export type ParseStringObject = Array<{
 // 示例用法：
 // const input = "觸束=畜[～牲]逐軸-蛐-[～蟮子]愁=";
 // console.log(parseString(input));
-export function parseString(s): ParseStringObject {
+export function parseString(s): ParseStringResultList {
   const result: any = [];
   let i = 0;
 
