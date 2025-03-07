@@ -68,7 +68,13 @@ export function genGuanQiao(data: CharList) {
     ele[YinBiao] = ele[YinBiao].replace("oŋ", "əŋ");
 
     // 转换əu 为 ei 塞到 ouList 和 eiList
-    if (ele[YinBiao].includes("əu") && !ele[YinBiao].includes("i")) {
+    if (
+      ele[YinBiao].includes("əu") 
+      && !ele[YinBiao].includes("i")
+      && !ele[YinBiao].includes("tʂ")
+      && !ele[YinBiao].includes("tʂʰ")
+      && !ele[YinBiao].includes("ʂ")
+    ) {
       const charArr = parseString(ele[ShiYi]);
 
       charArr.forEach((item) => {
@@ -130,8 +136,14 @@ export function genGuanQiao(data: CharList) {
 
   // 回填əu 和 en
   charList.forEach((ele) => {
-    // 回填əu
-    if (ele[YinBiao].includes("əu") && !ele[YinBiao].includes("i")) {
+    // 回填əu 
+    if (
+      ele[YinBiao].includes("əu") 
+      && !ele[YinBiao].includes("i")
+      && !ele[YinBiao].includes("tʂ")
+      && !ele[YinBiao].includes("tʂʰ")
+      && !ele[YinBiao].includes("ʂ")
+    ) {
       ele[ShiYi] = ouList
         .filter((ouItem) => {
           return (
