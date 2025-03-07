@@ -74,6 +74,7 @@ export function genGuanQiao(data: CharList) {
       && !ele[YinBiao].includes("tʂ")
       && !ele[YinBiao].includes("tʂʰ")
       && !ele[YinBiao].includes("ʂ")
+      && Number(ele[ShengDiao]) !== 7
     ) {
       const charArr = parseString(ele[ShiYi]);
 
@@ -143,6 +144,7 @@ export function genGuanQiao(data: CharList) {
       && !ele[YinBiao].includes("tʂ")
       && !ele[YinBiao].includes("tʂʰ")
       && !ele[YinBiao].includes("ʂ")
+      && Number(ele[ShengDiao]) !== 7
     ) {
       ele[ShiYi] = ouList
         .filter((ouItem) => {
