@@ -111,7 +111,7 @@ export function genGuanQiao(data: CharList) {
 
         // 在這裡處理 En to Ien
         if (needEnToIenConvert) {
-          ienList.push({ ...item, [ShengDiao]: ele[ShengDiao], [YinBiao]: ele[YinBiao].replace("ən", "iən"), });
+          ienList.push({ ...item, [ShengDiao]: ele[ShengDiao], [YinBiao]: ele[YinBiao].replace("ən", "iẽ"), });
         } else {
           enList.push({ ...item, [ShengDiao]: ele[ShengDiao], [YinBiao]: ele[YinBiao], });
         }

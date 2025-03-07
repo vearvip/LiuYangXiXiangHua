@@ -8,5 +8,5 @@ console.log(
   TshetUinh.資料.query字頭("生"),
   TshetUinh.資料.query字頭("牲"),
   TshetUinh.資料.query字頭("省"),
-  TshetUinh.資料.query字頭("耕")
+  TshetUinh.資料.query字頭("能")
 );
